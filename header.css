@@ -1,0 +1,16 @@
+#header
+{
+  min-width: 1200px;
+  width: 99%;
+  height: 95px;
+  line-height: 95px;
+  color: #623A92;
+  text-align: right;
+  border-radius: 5px;
+  padding-right: 1%;
+  margin: 10px;
+  background-color: #FFFFFF;
+  background-image: url(aop.jpg);
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.296875) 0px 0px 10px 0px;
+}

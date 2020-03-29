@@ -1,0 +1,50 @@
+<?php
+  /* init */
+  session_start();
+  require_once('info.php');
+
+  /* Prod information */
+  $BASE_URL = 'http://summerlove.ahouhpuc.fr';
+
+  /* MySQL */
+  $SQL_HOST = 'localhost';
+  $SQL_USER = '<INSERT SQL USER HERE>';
+  $SQL_PASSWD = '<INSERT SQL PASSWORD HERE>';
+  $SQL_DATABASE = '<INSERT DATABASE NAME HERE>';
+  $sldb = mysqli_connect($SQL_HOST, $SQL_USER, $SQL_PASSWD, $SQL_DATABASE);
+  if ($sldb == NULL) {
+        die('Erreur de connexion (' . mysqli_connect_errno() . ') '
+                        . mysqli_connect_error());
+  }
+
+  /* Manage permissions */
+  $PERM_READ = 'read';
+  $PERM_WRITE = 'write';
+  $PERM_ALL = 'all';
+
+  /* PUCk Up information */
+  $LEVELS = Array(0 => "Débutant", 1 => 'DR / D3 ou ~1-2 ans', 2 => 'D2 ou ~3-4 ans', 3 => 'D1 ou 4 ans et plus', 4 => 'International et/ou Star');
+  $MAX_PLAYERS = 160;
+  $MAX_TEAMS = 8;
+  $TEAM_COLORS = Array(
+                       Array('non définie', 'NULL'),
+                       Array("rouge", "#FF3366"),
+                       Array("jaune", "#FFFF99"),
+                       Array("bleue", "#A3C2FF"),
+                       Array('orange', 'orange'),
+                       Array("verte", "rgb(151, 223, 151)"),
+                       Array("blanche", "#F8F8F8"),
+                       Array('violette', 'purple'),
+                       Array("noire", "black")
+                      );
+
+  $ANNEE = 2019;
+  $DATES = [
+             1=>'04/07',
+             2=>'11/07',
+             3=>'18/07',
+             4=>'25/07',
+             5=>'01/08',
+             6=>'08/08',
+             7=>'15/08'
+           ];
